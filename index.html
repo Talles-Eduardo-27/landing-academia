@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arena Fit Messejana · Academia em Fortaleza</title>
+  <meta name="description" content="Landing page de academia no Messejana, Fortaleza. Projeto de portfólio com negócio fictício.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="aviso">Projeto de portfólio · negócio fictício</div>
+
+  <header class="topo">
+    <a href="#inicio" class="marca">Arena <span>Fit</span></a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="#servicos">Planos</a>
+      <a href="#agenda">Agendar</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#visite">Visite</a>
+      <a href="#" class="btn btn-peq js-whats">WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <p class="selo">Messejana · Fortaleza</p>
+        <h1>Treine perto de casa, com acompanhamento de verdade.</h1>
+        <p class="sub">Musculação, funcional e spinning das 5h às 23h. A primeira aula é por nossa conta.</p>
+        <div class="acoes">
+          <a href="#agenda" class="btn">Agende sua aula grátis</a>
+          <a href="#servicos" class="btn btn-claro">Ver planos</a>
+        </div>
+        <ul class="destaques">
+          <li><strong>5h às 23h</strong><span>seg a sex</span></li>
+          <li><strong>Aula grátis</strong><span>para conhecer</span></li>
+          <li><strong>Sem taxa</strong><span>de matrícula</span></li>
+        </ul>
+      </div>
+      <div class="hero-arte" aria-hidden="true">
+        <div class="arte-a">🏋️</div>
+        <div class="arte-b">ARENA</div>
+        <div class="arte-c"></div>
+      </div>
+    </section>
+
+    <section class="secao" id="servicos">
+      <div class="cabeca">
+        <h2>Planos e modalidades</h2>
+        <p>Valores de um negócio fictício, para demonstração.</p>
+      </div>
+      <div class="filtros">
+        <button class="filtro ativo" data-cat="todos">Todos</button>
+        <button class="filtro" data-cat="planos">Planos</button>
+        <button class="filtro" data-cat="modalidades">Modalidades</button>
+      </div>
+      <div class="itens" id="itens"></div>
+    </section>
+
+    <section class="secao" id="como">
+      <div class="cabeca"><h2>Como funciona</h2></div>
+      <div class="passos">
+        <div class="passo"><h3>Agende a aula grátis</h3><p>Escolha modalidade, dia e horário.</p></div>
+        <div class="passo"><h3>Conheça a estrutura</h3><p>Faça a aula com um professor.</p></div>
+        <div class="passo"><h3>Escolha seu plano</h3><p>Sem taxa de matrícula.</p></div>
+      </div>
+    </section>
+
+    <section class="secao agenda" id="agenda">
+      <div>
+        <h2>Agende sua aula grátis</h2>
+        <p>Escolha o que precisa, o dia e o horário. O pedido vai pronto para o WhatsApp e a confirmação chega por lá.</p>
+      </div>
+      <form class="form" id="form" novalidate>
+        <label>Modalidade<select id="f-servico"></select></label>
+        <label>Dia<select id="f-dia"></select></label>
+        <div><span style="font-weight:500;font-size:.92rem">Horário</span><div class="horas" id="horas"></div></div>
+        <label>Seu nome<input id="f-nome" placeholder="Como podemos te chamar?" maxlength="40" autocomplete="name"></label>
+        <p class="resumo" id="resumo"></p>
+        <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+      </form>
+    </section>
+
+    <section class="secao sobre" id="sobre">
+      <div>
+        <h2>Por que a Arena</h2>
+        <p>Professor no salão o tempo todo, não só na ficha de treino.</p>
+        <p>Avaliação física a cada 60 dias para você ver o resultado em número.</p>
+      </div>
+      <div class="numeros">
+        <div><strong>600 m²</strong><span>de área de treino</span></div>
+        <div><strong>5h</strong><span>abre cedo</span></div>
+        <div><strong>60 dias</strong><span>entre avaliações</span></div>
+      </div>
+    </section>
+
+    <section class="secao visite" id="visite">
+      <div>
+        <h2>Visite</h2>
+        <p><strong>Endereço:</strong> Av. Frei Cirilo, 0000 · Messejana, Fortaleza-CE</p>
+        <p><strong>Horário:</strong> segunda a sexta, das 5h às 23h; sábado, das 8h às 14h</p>
+        <p class="status" id="status"></p>
+        <a href="#agenda" class="btn">Agende sua aula grátis</a>
+      </div>
+      <div class="mapa" aria-label="Mapa ilustrativo">
+        <span>📍</span>
+        <p>Messejana, Fortaleza</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Arena Fit Messejana é um negócio fictício. Site feito com IA (Claude) e revisado por <a href="https://github.com/Talles-Eduardo-27">Talles Eduardo</a>, como projeto de portfólio.</p>
+  </footer>
+
+  <a href="#" class="whats-flutuante js-whats" aria-label="Falar no WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
